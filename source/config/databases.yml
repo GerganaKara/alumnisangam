@@ -6,7 +6,7 @@ all:
       host:     localhost
       database: itbhu
       username: itbhuV2
-      password: VubhVCJcAZSrpXtr
+      password: x
   v2bb:
     class:      sfPropelDatabase
     param:
@@ -14,4 +14,4 @@ all:
       host:     localhost
       database: v2bb
       username: itbhuV2
-      password: VubhVCJcAZSrpXtr
+      password: x
