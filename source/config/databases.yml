@@ -5,13 +5,13 @@ all:
       phptype:  mysql
       host:     localhost
       database: itbhu
-      username: root
-      password: neev
+      username: itbhuV2
+      password: VubhVCJcAZSrpXtr
   v2bb:
     class:      sfPropelDatabase
     param:
       phptype:  mysql
       host:     localhost
       database: v2bb
-      username: root
-      password: neev
+      username: itbhuV2
+      password: VubhVCJcAZSrpXtr

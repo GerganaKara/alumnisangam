@@ -10,9 +10,9 @@ all:
     name: itbhuglobal.org 
   mail:
     server_type: smtp
-    hostname:    192.168.1.84
-    username:    neev@smtp.neevtech.com
-    password:    sp2English
+    hostname:    localhost
+    username:    
+    password:    
     character:   utf-8
   from: 
     mail: system@itbhuglobal.org
@@ -22,7 +22,7 @@ all:
   names:
     org: ITBHU Global
   urls:
-    claim: http://localhost:8888/home/index.html
+    claim: http://version2-test.itbhuglobal.org/home/index.html
   privacyicon:
     1: prvme.gif
     2: prvfriends.gif
@@ -46,7 +46,7 @@ all:
     auth: Authorizers
     masterauth: Master Authorizers
   headerrepeat:
-    after: 5
+    after: 15
   lortext:
     location: Current Location
     employer: Current Employer
