@@ -45,7 +45,9 @@ class familyActions extends sfActions
     $c->add(LorvaluesPeer::LORFIELDS_ID, sfConfig::get('app_lor_general'));
     $this->glors = LorvaluesPeer::doSelect($c);*/
     
-    $this->forward404Unless($this->family);
+    if(!$this->family) {
+    	$this->forward('family', 'edit');
+    }
   }
 
   public function executeCreate()
@@ -64,8 +66,11 @@ class familyActions extends sfActions
     $c = new Criteria();
     $c->add(FamilyPeer::USER_ID, $user->getId());
     $this->family = FamilyPeer::doSelectOne($c);
-    $this->forward404Unless($this->family);
-    echo $this->family->getDom();
+    
+    if(!$this->family){
+    	$this->family = new Family();
+    	$this->family->setUser($user);
+    }
    $this->privacyoptions = Array('1' => 'Myself', '2' => 'My Friends', '3' => 'IT BHU', '4' => 'Everyone');
     //$this->salutations = Array('Mr'=>'Mr', 'Miss'=>'Miss', 'Mrs'=>'Mrs', 'Ms'=>'Ms', 'Dr'=>'Dr', 'Prof'=>'Prof');
     //$this->gender = Array('Female'=>'Female', 'Male'=>'Male');
