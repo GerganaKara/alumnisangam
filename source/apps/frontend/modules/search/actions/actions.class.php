@@ -37,8 +37,8 @@ class searchActions extends sfActions{
 	//User type
 	$options = array();
     $options[0] = sfConfig::get('app_usertype_0');
-    $options[1] = sfConfig::get('app_usertype_1');;
-	$options[2] = sfConfig::get('app_usertype_2');;
+    $options[1] = sfConfig::get('app_usertype_1');
+	$options[2] = sfConfig::get('app_usertype_2');
 	$this->useroptions = $options; 
 	
 	//Country
@@ -68,16 +68,11 @@ class searchActions extends sfActions{
   		$orgflag = 1;
   	}*/
   	
-  	if( ($this->getUser()->getAttribute('lastsortparam') == $sortcriteria) && ($this->getUser()->getAttribute('lastsortact')) ){
-  		$sorttype = $this->getUser()->getAttribute('lastsortact');
-  	}else{
-  		$sorttype = 123;
-  	}
   	$sortcriteria = $this->getRequestParameter('sort');
   	if(!$sortcriteria){
-  		$sortcriteria = $this->getUser()->getAttribute('assort');
+  		$sortcriteria = $this->getUser()->getAttribute('lastsortparam');
   	}else{
-  		$this->getUser()->setAttribute('assort', $sortcriteria);
+  		//$this->getUser()->setAttribute('assort', $sortcriteria);
   		if($this->getUser()->getAttribute('lastsortparam') == $sortcriteria){
   			if($this->getUser()->getAttribute('lastsortact') == 123){
   				$sorttype = 321;
@@ -89,46 +84,37 @@ class searchActions extends sfActions{
   		$this->getUser()->setAttribute('lastsortact', $sorttype);
   	}
   	
-	$firstname = $this->getsets('firstname');
-	$lastname = $this->getsets('lastname');
-	$branchid = $this->getsetd('branch');
-	$yearid = $this->getsetd('year');
-	$chapterid = $this->getsetd('chapter');
-	$usertypeid = $this->getsetd('usertype');
-	$location = $this->getsets('location');
-	$countryid = $this->getsetd('country');
+	$this->fname = $firstname = $this->getsets('firstname');
+	$this->lname = $lastname = $this->getsets('lastname');
+	$this->br = $branchid = $this->getsetd('branch');
+	$this->yr = $yearid = $this->getsetd('year');
+	$this->chap = $chapterid = $this->getsetd('chapter');
+	$this->usertypeid = $usertypeid = $this->getsetd('usertype');
+	$this->loc = $location = $this->getsets('location');
+	$this->cn = $countryid = $this->getsetd('country');
 	
-	$this->br = $branchid;
-	$this->yr = $yearid;
-	$this->loc = $location;
-	$this->cn = $countryid;
-	$this->fname = $firstname;
-	$this->lname = $lastname;
-	$this->chap = $chapterid;
-	$this->usertypeid = $usertypeid;
-	
-	$persjoin = 0;
 	$chjoin = 0;
 	
 	$c = new Criteria();
-	if($firstname || $lastname){
-		$c->addJoin(UserPeer::ID, PersonalPeer::USER_ID);
-		$persjoin = 1;
-		if($firstname){
-			$c->add(PersonalPeer::FIRSTNAME , $firstname);
-		}
-	 	if($lastname){
-			$c->add(PersonalPeer::LASTNAME , $lastname);
-		}
+	$c->addJoin(UserPeer::ID, PersonalPeer::USER_ID);
+	
+	if($firstname){
+		$c->add(PersonalPeer::FIRSTNAME , $firstname);
 	}
+ 	if($lastname){
+		$c->add(PersonalPeer::LASTNAME , $lastname);
+	}
+
 	$this->privacyfilter($branchid, $orgflag, $c, 'user.BRANCH_ID', 'user.BRANCHFLAG');
 	$this->privacyfilter($yearid, $orgflag, $c, 'user.GRADUATIONYEAR', 'user.GRADUATIONYEARFLAG');
+
 	if($chapterid != 0){
 		$c->addJoin(UserPeer::ID, UserchapterregionPeer::USER_ID);
 		$c->addJoin(UserchapterregionPeer::CHAPTERREGION_ID, ChapterregionPeer::ID);
-		$chjoin = 1;
 		$c->add(ChapterregionPeer::CHAPTER_ID, $chapterid);
+		$chjoin = 1;
 	}
+	
 	$c->add(UserPeer::USERTYPE, $usertypeid);
 	if($location){
 		$c->add(UserPeer::CURRENTLYAT, $location);
@@ -148,15 +134,11 @@ class searchActions extends sfActions{
 		}
 	}  
 	
-	
   	if($sortcriteria){
   		switch ($sortcriteria){
-  			case "name" : if(!$persjoin){
-  							$c->addJoin(UserPeer::ID, PersonalPeer::USER_ID);
-  						  }
-  						  $this->ascdesc($sorttype, 'personal.FIRSTNAME', $c);
+  			case "name" : $this->ascdesc($sorttype, 'personal.FIRSTNAME', $c);
   						break;
-  			case "roll" : $this->ascdesc($sorttype, 'user.ROLL', $c);; 
+  			case "roll" : $this->ascdesc($sorttype, 'user.ROLL', $c);
   						break;
   			case "year" : $this->ascdesc($sorttype, 'user.GRADUATIONYEAR', $c);
   						break;
@@ -176,6 +158,7 @@ class searchActions extends sfActions{
   			case "lastlogin" : $this->ascdesc($sorttype, 'user.LASTLOGIN', $c);
   				 		break;
   		}
+  		
   	}
   	
   	$pageoptions = array();
@@ -196,7 +179,6 @@ class searchActions extends sfActions{
   	}else{
   		$pager = new sfPropelPager('User', sfConfig::get('app_pager_min'));
   	}
-  	//echo $c->toString();	//for debugging
   	
   	$cr = new Criteria();
   	$cr->add(RolePeer::ASSIGNABLE, '1');
@@ -219,9 +201,6 @@ class searchActions extends sfActions{
 	}
   	//$c->addGroupByColumn(PersonalWorktypePeer::PERSONAL_ID);
   	
-  
-        
-  	
 	$pager->setCriteria($c);
 	$pager->setPage($this->getRequestParameter('page', 1));
 	$pager->init();
@@ -233,8 +212,7 @@ class searchActions extends sfActions{
 	}else{
 		$this->count = $this->getUser()->getAttribute('resultcount');
 	}
-
-  } 
+  }
   
   protected function clearattrib(){
   	$this->getUser()->getAttributeHolder()->remove('sort');
@@ -261,6 +239,9 @@ class searchActions extends sfActions{
   	}
   }
 
+  	/*
+	* Get/set string params
+	*/
   protected function getsets($param){
   	$paramvalue = $this->getRequestParameter($param);
 	if($paramvalue){
@@ -270,7 +251,9 @@ class searchActions extends sfActions{
 	}
 	return $paramvalue;
   }
-  
+  	/*
+	* Get/set integer params
+	*/  
   protected function getsetd($param){
   	$paramvalue = $this->getRequestParameter($param);
 	if($paramvalue != 0){
