@@ -5,7 +5,7 @@ set:
     &amp;
 
 check:
-  zend.ze1_compatibility_mode: off
+#  zend.ze1_compatibility_mode: off
 
 warn:
   magic_quotes_gpc:            off

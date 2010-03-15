@@ -1,255 +1,255 @@
 propel:
  user:
    id:                ~
-   username:          varchar(50)
-   password:          varchar(50)
+   username:          { type: varchar(50), required: true, index: unique }
+   password:          { type: varchar(50), required: true }
    enrolment:         { type: integer, size: 20}
-   enrolFlag:         varchar(5)
+   enrolFlag:         { type: varchar(5),default: <?php echo sfConfig::get('app_defaultprivacy_enrol')?> }
    roll:              { type: integer, size: 20}
-   rollFlag:          varchar(5)
+   rollFlag:          { type: varchar(5),default: <?php echo sfConfig::get('app_defaultprivacy_roll')?> }
    graduationyear:    { type: integer, size: 4}
-   graduationyearFlag: varchar(5)
-   branch_id:         ~
-   branchFlag:        varchar(5)
-   degree_id:         ~
-   degreeFlag:        varchar(5)
-   usertype:          varchar(5)
-   tempemail:         varchar(50)
-   currentlyat:       varchar(50)
-   currentlyatFlag:   varchar(5)   
-   islocked:          varchar(1)
-   isinvited:         varchar(1)
-   authcode:          varchar(1)
+   branch_id:         { type: integer, foreignTable: branch, foreignReference: id }
+   graduationyearFlag:  { type: varchar(5),default: <?php echo sfConfig::get('app_defaultprivacy_year')?> }
+   branchFlag:        { type: varchar(5),default: <?php echo sfConfig::get('app_defaultprivacy_branch')?> }
+   degree_id:         { type: integer, foreignTable: degree, foreignReference: id }
+   degreeFlag:        { type: varchar(5),default: <?php echo sfConfig::get('app_defaultprivacy_degree')?> }
+   usertype:          { type: varchar(5),default: <?php echo sfConfig::get('app_usertypecode_Alumni')?> }
+   tempemail:         { type: varchar(50) }
+   currentlyat:       { type: varchar(50) }
+   currentlyatFlag:   { type: varchar(5) }  
+   islocked:          { type: varchar(1),default: <?php echo sfConfig::get('app_islocked_unclaimed')?> }
+   isinvited:         { type: varchar(1) }
+   authcode:          { type: varchar(1) }
    lastlogin:         timestamp
  role:
    id:                ~
-   name:              varchar(20)
-   displayname:       varchar(50)
-   assignable:        varchar(2)
+   name:              { type: varchar(20), index: unique }
+   displayname:       { type: varchar(50) }
+   assignable:        { type: varchar(2) }
    description:       longvarchar
  userRole:
    id:                ~
-   user_id:           ~
-   role_id:           ~
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   role_id:           { type: integer, foreignTable: role, foreignReference: id, required: true, onDelete: cascade }
  personal:
    id:                ~
-   user_id:           ~
-   image:             varchar(200)
-   imageFlag:         varchar(5)
-   salutation:        varchar(5)
-   firstname:         varchar(15)
-   firstnameFlag:     varchar(5)
-   middlename:        varchar(15)
-   middlenameFlag:    varchar(5)
-   lastname:          varchar(15)
-   lastnameFlag:      varchar(5)
-   maidenname:        varchar(20)
-   maidennameFlag:    varchar(5)
-   itbhuname:         varchar(20)
-   itbhunameFlag:     varchar(5)
-   gender:            varchar(10)
-   genderFlag:        varchar(5)
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade, index: unique }
+   image:             { type: varchar(200) }
+   imageFlag:         { type: varchar(5) }
+   salutation:        { type: varchar(5) }
+   firstname:         { type: varchar(15) }
+   firstnameFlag:     { type: varchar(5) }
+   middlename:        { type: varchar(15) }
+   middlenameFlag:    { type: varchar(5) }
+   lastname:          { type: varchar(15) }
+   lastnameFlag:      { type: varchar(5) }
+   maidenname:        { type: varchar(20) }
+   maidennameFlag:    { type: varchar(5) }
+   itbhuname:         { type: varchar(20) }
+   itbhunameFlag:     { type: varchar(5) }
+   gender:            { type: varchar(10) }
+   genderFlag:        { type: varchar(5) }
    dob:               date
-   dobFlag:           varchar(5)
-   maritalstatus:     varchar(10)
-   maritalstatusFlag: varchar(5)
-   email:             varchar(50)
-   emailFlag:         varchar(5)
-   website:           varchar(100)
-   websiteFlag:       varchar(5)
-   linkedin:          varchar(100)
-   linkedinFlag:      varchar(5)
-   hobbies:           varchar(100)
-   hobbiesFlag:       varchar(5)
-   interest:          longvarchar
+   dobFlag:           { type: varchar(5) }
+   maritalstatus:     { type: varchar(10) }
+   maritalstatusFlag: { type: varchar(5) }
+   email:             { type: varchar(50) }
+   emailFlag:         { type: varchar(5) }
+   website:           { type: varchar(100) }
+   websiteFlag:       { type: varchar(5) }
+   linkedin:          { type: varchar(100) }
+   linkedinFlag:      { type: varchar(5) }
+   hobbies:           { type: varchar(100) }
+   hobbiesFlag:       { type: varchar(5) }
+   interest:          { type: longvarchar }
  address:
    id:                ~
-   user_id:           ~
-   address:           varchar(150)
-   addressFlag:       varchar(5)
-   city:              varchar(50)
-   cityFlag:          varchar(5)
-   state:             varchar(50)
-   stateFlag:         varchar(5)
-   country:           varchar(25)
-   countryFlag:       varchar(5)
-   postalcode:        varchar(10)
-   postalcodeFlag:    varchar(5)
-   phone1:            varchar(20)
-   phone1Flag:        varchar(5)
-   phone2:            varchar(20)
-   phone2Flag:        varchar(5)
-   cellphone:         varchar(20)
-   cellphoneFlag:     varchar(5)
-   fax:               varchar(20)
-   faxFlag:           varchar(5)
-   type:              varchar(5)
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   address:           { type: varchar(150) }
+   addressFlag:       { type: varchar(5) }
+   city:              { type: varchar(50) }
+   cityFlag:          { type: varchar(5) }
+   state:             { type: varchar(50) }
+   stateFlag:         { type: varchar(5) }
+   country:           { type: varchar(25) }
+   countryFlag:       { type: varchar(5) }
+   postalcode:        { type: varchar(10) }
+   postalcodeFlag:    { type: varchar(5) }
+   phone1:            { type: varchar(20) }
+   phone1Flag:        { type: varchar(5) }
+   phone2:            { type: varchar(20) }
+   phone2Flag:        { type: varchar(5) }
+   cellphone:         { type: varchar(20) }
+   cellphoneFlag:     { type: varchar(5) }
+   fax:               { type: varchar(20) }
+   faxFlag:           { type: varchar(5) }
+   type:              { type: varchar(5) }
  professional:
    id:                ~
-   user_id:           ~
-   employer:          varchar(100)
-   employerFlag:      varchar(5)
-   position:          varchar(100)
-   positionFlag:      varchar(5)
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   employer:          { type: varchar(100)}
+   employerFlag:      { type: varchar(5)}
+   position:          { type: varchar(100)}
+   positionFlag:      { type: varchar(5)}
    fromdate:          date
    todate:            date
  family:
    id:                ~
-   user_id:           ~
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
    dom:               date
-   domFlag:           varchar(5)
-   spousename:        varchar(100)
-   spousenameFlag:    varchar(5)
-   spouseemployer:    varchar(100)
-   spouseemployerFlag: varchar(5)
-   spousetitle:       varchar(100)
-   spousetitleFlag:   varchar(5)
-   children:          varchar(2)
-   childrenFlag:      varchar(5)
+   domFlag:           { type: varchar(5)}
+   spousename:        { type: varchar(100)}
+   spousenameFlag:    { type: varchar(5)}
+   spouseemployer:    { type: varchar(100)}
+   spouseemployerFlag:{ type: varchar(5)}
+   spousetitle:       { type: varchar(100)}
+   spousetitleFlag:   { type: varchar(5)}
+   children:          { type: varchar(2)}
+   childrenFlag:      { type: varchar(5)}
  academic:
    id:                ~
-   user_id:           ~
-   degree:            varchar(50)
-   degreeFlag:        varchar(5)
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   degree:            { type: varchar(50)}
+   degreeFlag:        { type: varchar(5)}
    year:              { type: integer, size: 4}
-   yearFlag:          varchar(5)
-   department:        varchar(50)
-   departmentFlag:    varchar(5)
-   institute:         varchar(100)
-   instituteFlag:     varchar(5)
+   yearFlag:          { type: varchar(5)}
+   department:        { type: varchar(50)}
+   departmentFlag:    { type: varchar(5)}
+   institute:         { type: varchar(100)}
+   instituteFlag:     { type: varchar(5)}
  degree:
    id:                ~
-   name:              varchar(50)
+   name:              { type: varchar(50) }
  branch:
    id:                ~
-   name:              varchar(50)
-   code:              varchar(3)
+   name:              { type: varchar(50) }
+   code:              { type: varchar(3) }
  chapter:
    id:                ~
-   name:              varchar(50)
+   name:              { type: varchar(50) }
  region:
    id:                ~
-   name:              varchar(50)
+   name:              { type: varchar(50) }
  chapterRegion:
    id:                ~
-   chapter_id:        ~
-   region_id:         ~
+   chapter_id:        { type: integer, foreignTable: chapter, foreignReference: id, required: true, onDelete: cascade }
+   region_id:         { type: integer, foreignTable: region, foreignReference: id, required: true, onDelete: cascade }
  userChapterRegion:
    id:                ~
-   user_id:           ~
-   chapterRegion_id:  ~
-   other:             varchar(50)
-   ucrFlag:           varchar(5)
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   chapterRegion_id:  { type: integer, foreignTable: chapterRegion, foreignReference: id, required: true, onDelete: cascade }
+   other:             { type: varchar(50) }
+   ucrFlag:           { type: varchar(5) }
  badge:
    id:                ~
-   name:              varchar(50)
-   image:             varchar(200)
+   name:              { type: varchar(50) }
+   image:             { type: varchar(200) }
  userBadge:
    id:                ~
-   user_id:           ~
-   badge_id:          ~
-   badgeFlag:         varchar(5)
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   badge_id:          { type: integer, foreignTable: badge, foreignReference: id, required: true, onDelete: cascade }
+   badgeFlag:         { type: varchar(5) }
  lorFields:
    id:                ~
-   fields:           varchar(50)
+   fields:            { type: varchar(50) }
  lorValues:
    id:                ~
-   lorFields_id:      ~
-   data:              varchar(200)
-   user_id:           ~
+   lorFields_id:      { type: integer, foreignTable: lorFields, foreignReference: id, required: true, onDelete: cascade }
+   data:              { type: varchar(200) }
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
    created_at:        ~
  lorUser:
    id:                ~
-   lorValues_id:      ~
-   user_id:           ~
+   lorValues_id:      { type: integer, foreignTable: lorValues, foreignReference: id, required: true, onDelete: cascade }
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
  mag:
    id:                ~
-   user_id:           ~
-   mailinggroup:      varchar(100)
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   mailinggroup:      { type: varchar(100) }
    year:              { type: integer, size: 4}
-   branch:            varchar(50)
-   moderatoremail:    varchar(50)
-   details:           varchar(300)
+   branch:            { type: varchar(50) }
+   moderatoremail:    { type: varchar(50) }
+   details:           { type: varchar(300) }
  pepPage:
    id:                ~
-   tabname:           varchar(25)
-   content:           longvarchar
+   tabname:           { type: varchar(25) }
+   content:           { type: longvarchar }
    sequence:          { type: integer, size: 2}
    created_at:        ~
    updated_at:        ~
  pepUser:
    id:                ~
-   user_id:           ~
-   pepPage_id:        ~
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   pepPage_id:        { type: integer, foreignTable: pepPage, foreignReference: id, required: true, onDelete: cascade }
  country:
    id:                ~
-   name:              varchar(20)
+   name:              { type: varchar(20) }
  country:
    id:                ~
-   name:              varchar(25)
+   name:              { type: varchar(25) }
  claiminfo:
    id:                ~
    user_id:           ~
-   roll:              varchar(10)
-   hawa:              varchar(10)
-   city:              varchar(25)
-   hod:               varchar(25)
-   director:          varchar(25)
-   teacher:           varchar(25)
-   lankashop:         varchar(25)
-   other:             varchar(200)
-   dusername:         varchar(25)
+   roll:              { type: varchar(10) }
+   hawa:              { type: varchar(10) }
+   city:              { type: varchar(25) }
+   hod:               { type: varchar(25) }
+   director:          { type: varchar(25) }
+   teacher:           { type: varchar(25) }
+   lankashop:         { type: varchar(25) }
+   other:             { type: varchar(200) }
+   dusername:         { type: varchar(25) }
  friend:
    id:                ~
-   user_id:           ~
-   status:            varchar(1)
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   status:            { type: varchar(1) }
  userfriend:
    id:                ~
-   user_id:           ~
-   friend_id:         ~
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   friend_id:         { type: integer, foreignTable: friend, foreignReference: id, required: true, onDelete: cascade }
  resume:
    id:                ~
-   user_id:           ~
-   content:           longvarchar
+   user_id:           { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+   content:           { type: longvarchar }
  notes:
   id:                 ~
-  user_id:            ~
-  note:               longvarchar
+  user_id:            { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+  note:               { type: longvarchar }
  flags:
   id:                 ~
-  user_id:            ~
-  newsletter:         boolean
-  mail:               boolean
- chaptersandevents:
-  id:                 ~
-  name:               varchar(50)
-  type:               varchar(10)
- involvement:
-  id:                 ~
-  name:               varchar(50)
- careerResources:
-  id:                 ~
-  name:               varchar(50)
- news:
-  id:                 ~
-  name:               varchar(50)
- organizational:
-  id:                 ~
-  name:               varchar(50)
+  user_id:            { type: integer, foreignTable: user, foreignReference: id, required: true, onDelete: cascade }
+  newsletter:         { type: boolean }
+  mail:               { type: boolean }
+# chaptersandevents:
+#  id:                 ~
+#  name:               { type: varchar(50) }
+#  type:               { type: varchar(10) }
+# involvement:
+#  id:                 ~
+#  name:               { type: varchar(50) }
+# careerResources:
+#  id:                 ~
+#  name:               { type: varchar(50) }
+# news:
+#  id:                 ~
+#  name:               { type: varchar(50) }
+# organizational:
+#  id:                 ~
+#  name:               { type: varchar(50) }
  worktype:
   id:                 ~
-  name:               varchar(100)
-  description:        longvarchar
+  name:               { type: varchar(100) }
+  description:        { type: longvarchar }
  personal_worktype:
   id:                 ~
-  personal_id:        ~
-  worktype_id:        ~
+  personal_id:        { type: integer, foreignTable: personal, foreignReference: id, required: true, onDelete: cascade }
+  worktype_id:        { type: integer, foreignTable: worktype, foreignReference: id, required: true, onDelete: cascade }
  mails:
    id:                ~
-   subject:           varchar(100)
-   message:           longvarchar
-   sendername:        varchar(100)
-   sendermail:        varchar(100)
-   recipientname:     varchar(100)
-   recipientmail:     varchar(100)
-   approved:          boolean
+   subject:           { type: varchar(100) }
+   message:           { type: longvarchar }
+   sendername:        { type: varchar(100) }
+   sendermail:        { type: varchar(100) }
+   recipientname:     { type: varchar(100) }
+   recipientmail:     { type: varchar(100) }
+   approved:          { type: boolean }

@@ -1,0 +1,89 @@
+#basically this YAML contains fixtures for tables who don't have FKs
+#chapter, degree, lorfields, region, worktype, Badge, Branch...
+#Table name's Case is important
+Chapter:
+  bglr:
+    name: Bangalore
+  vns:
+    name: Varanasi
+Degree:
+  btech:
+    name: B.Tech
+  mtech:
+    name: M.Tech
+Lorfields:
+  loc:
+    fields: Location
+  emp:
+    fields: Employer
+  pos:
+    fields: Position
+  lin:
+    fields: Linked In
+  gen:
+    fields: General
+  email:
+    fields: Email
+Region:
+  india:
+    name: India
+  eur:
+    name: Europe
+Worktype:
+  fin:
+    name:         Finance
+    description:  Finance
+  entr:
+    name:         Entrepreneur
+    description:  Entrepreneur
+  swrk:
+    name:         Social Work
+    description:  Social Work
+  edu:
+    name:         Education
+  tech:
+    name:         Technology
+  oper:
+    description:  Operations
+Badge:
+  ky:
+    name: Kashiyatra Core
+  topper:
+    name: Topper
+Branch:
+  cera:
+    code: CER
+    name: Ceramics
+  chem:
+    code: CHE
+    name: Chemical
+  civil:
+    code: CIV
+    name: Civil
+  trical:
+    code: EEE
+    name: Electrical
+  tronix:
+    code: ECE
+    name: Electronics
+  mech:
+    code: MEC
+    name: Mechanical
+  meta:
+    code: MET
+    name: Metallurgy
+  mining:
+    code: MIN
+    name: Mining
+  pharma:
+    code: PHE
+    name: Pharmaceutical
+  compsci:
+    code: CSE
+    name: Computer Science
+  smst:
+    code: MST
+    name: Material Science and Technology
+  branch:
+    code: BRA
+    name: Branch

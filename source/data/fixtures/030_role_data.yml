@@ -1,0 +1,31 @@
+Role:
+  admn:
+    name:         admin
+    displayname:  Administrator
+    description:  Administrator with all privileges except to create another administrator.
+    assignable:   0
+  ath:
+    name:         auth
+    displayname:  Authorizer
+    description:  Authorizer based on same class /  +-2 classes
+    assignable:   1
+  usr:
+    name:         user
+    displayname:  User
+    description:  Normal User
+    assignable:   0
+  gst:
+    name:         guest
+    displayname:  Guest
+    description:  Guest User
+    assignable:   0
+  spadmn:
+    name:         superadmin
+    description:  Administrator with all privileges(including right to create another Administrator)
+    displayname:  Super Administrator
+    assignable:   0
+  mauth:
+    name:         masterauth
+    displayname:  Master Authorizer
+    description:  Master Authorizer
+    assignable:   1

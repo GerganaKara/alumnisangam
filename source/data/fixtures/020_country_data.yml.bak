@@ -1,0 +1,61 @@
+Country:
+  ind:
+    name: India
+  afg:
+    name: Afghanistan
+  alg:
+    name: Algeria
+  aso:
+    name: American Samoa
+  and:
+    name: Andorra
+  agl:
+    name: Angola
+  ang:
+    name: Anguilla
+  ant:
+    name: Antarctica
+  aab:
+    name: Antigua and Barbudos
+  arg:
+    name: Argentina
+  arm:
+    name: Armenia
+  arb:
+    name: Aruba
+  aus:
+    name: Australia
+  ara:
+    name: Austria
+  azb:
+    name: Azerbaijan
+  bhm:
+    name: Bahamas
+  bah:
+    name: Bahrain
+  bdh:
+    name: Bangladesh
+  bbd:
+    name: Barbados
+  bls:
+    name: Belarus
+  bgm:
+    name: Belgium
+  blz:
+    name: Belize
+  bnn:
+    name: Benin
+  bmd:
+    name: Bermuda
+  bht:
+    name: Bhutan
+  blv:
+    name: Bolivia
+  bhz:
+    name: Bosnia and Herzegovina
+  bwn:
+    name: Botswana
+  bvi:
+    name: Bouvet Island
+  bra:
+    name: Brazil

@@ -1,0 +1,510 @@
+Country:
+    Afghanistan: {name: Afghanistan}
+
+    Albania: {name: Albania}
+
+    Algeria: {name: Algeria}
+
+    American Samoa: {name: American Samoa}
+
+    Andorra: {name: Andorra}
+
+    Angola: {name: Angola}
+
+    Anguilla: {name: Anguilla}
+
+    Antarctica: {name: Antarctica}
+
+    Antigua And Barbuda: {name: Antigua And Barbuda}
+
+    Argentina: {name: Argentina}
+
+    Armenia: {name: Armenia}
+
+    Aruba: {name: Aruba}
+
+    Australia: {name: Australia}
+
+    Austria: {name: Austria}
+
+    Azerbaijan: {name: Azerbaijan}
+
+    Bahamas: {name: Bahamas}
+
+    Bahrain: {name: Bahrain}
+
+    Bangladesh: {name: Bangladesh}
+
+    Barbados: {name: Barbados}
+
+    Belarus: {name: Belarus}
+
+    Belgium: {name: Belgium}
+
+    Belize: {name: Belize}
+
+    Benin: {name: Benin}
+
+    Bermuda: {name: Bermuda}
+
+    Bhutan: {name: Bhutan}
+
+    Bolivia: {name: Bolivia}
+
+    Bosnia And Herzegowina: {name: Bosnia And Herzegowina}
+
+    Botswana: {name: Botswana}
+
+    Bouvet Island: {name: Bouvet Island}
+
+    Brazil: {name: Brazil}
+
+    British Indian Ocean Territory: {name: British Indian Ocean Territory}
+
+    Brunei Darussalam: {name: Brunei Darussalam}
+
+    Bulgaria: {name: Bulgaria}
+
+    Burkina Faso: {name: Burkina Faso}
+
+    Burundi: {name: Burundi}
+
+    Cambodia: {name: Cambodia}
+
+    Cameroon: {name: Cameroon}
+
+    Canada: {name: Canada}
+
+    Cape Verde: {name: Cape Verde}
+
+    Cayman Islands: {name: Cayman Islands}
+
+    Central African Republic: {name: Central African Republic}
+
+    Chad: {name: Chad}
+
+    Chile: {name: Chile}
+
+    China: {name: China}
+
+    Christmas Island: {name: Christmas Island}
+
+    Cocos (keeling) Islands: {name: Cocos (keeling) Islands}
+
+    Colombia: {name: Colombia}
+
+    Comoros: {name: Comoros}
+
+    Congo: {name: Congo}
+
+    Congo,The Democratic Rep: {name: 'Congo,The Democratic Rep'}
+
+    Cook Islands: {name: Cook Islands}
+
+    Costa Rica: {name: Costa Rica}
+
+    Cameroon: {name: Cameroon}
+
+    Canada: {name: Canada}
+
+    Cape Verde: {name: Cape Verde}
+
+    Cayman Islands: {name: Cayman Islands}
+
+    Central African Republic: {name: Central African Republic}
+
+    Chad: {name: Chad}
+
+    Chile: {name: Chile}
+
+    China: {name: China}
+
+    Christmas Island: {name: Christmas Island}
+
+    Cocos (keeling) Islands: {name: Cocos (keeling) Islands}
+
+    Colombia: {name: Colombia}
+
+    Comoros: {name: Comoros}
+
+    Congo: {name: Congo}
+
+    Congo,The Democratic Rep: {name: 'Congo,The Democratic Rep'}
+
+    Cook Islands: {name: Cook Islands}
+
+    Costa Rica: {name: Costa Rica}
+
+    Cote D ivoire: {name: Cote D ivoire}
+
+    Croatia: {name: Croatia}
+
+    Cuba: {name: Cuba}
+
+    Cyprus: {name: Cyprus}
+
+    Czech Republic: {name: Czech Republic}
+
+    Denmark: {name: Denmark}
+
+    Djibouti: {name: Djibouti}
+
+    Dominica: {name: Dominica}
+
+    Dominican Republic: {name: Dominican Republic}
+
+    East Timor: {name: East Timor}
+
+    ' Ecuador': {name: ' Ecuador'}
+
+    Egypt: {name: Egypt}
+
+    El Salvador: {name: El Salvador}
+
+    ' Equatorial Guinea': {name: ' Equatorial Guinea'}
+
+    Eritrea: {name: Eritrea}
+
+    Estonia: {name: Estonia}
+
+    Ethiopia: {name: Ethiopia}
+
+    Falkland Islands (malvinas): {name: Falkland Islands (malvinas)}
+
+    Faroe Islands: {name: Faroe Islands}
+
+    Fiji: {name: Fiji}
+
+    Finland: {name: Finland}
+
+    France: {name: France}
+
+    French Guiana: {name: French Guiana}
+
+    French Polynesia: {name: French Polynesia}
+
+    French Southern Territories: {name: French Southern Territories}
+
+    Gabon: {name: Gabon}
+
+    Gambia: {name: Gambia}
+
+    Georgia: {name: Georgia}
+
+    Germany: {name: Germany}
+
+    Ghana: {name: Ghana}
+
+    Gibraltar: {name: Gibraltar}
+
+    Greece: {name: Greece}
+
+    Greenland: {name: Greenland}
+
+    Grenada: {name: Grenada}
+
+    Guadeloupe: {name: Guadeloupe}
+
+    Guam: {name: Guam}
+
+    Guatemala: {name: Guatemala}
+
+    Guinea: {name: Guinea}
+
+    Guinea-bissau: {name: Guinea-bissau}
+
+    Guyana: {name: Guyana}
+
+    Haiti: {name: Haiti}
+
+    Heard And Mc Donald Islands: {name: Heard And Mc Donald Islands}
+
+    Holy See (vatican City State): {name: Holy See (vatican City State)}
+
+    Honduras: {name: Honduras}
+
+    Hong Kong: {name: Hong Kong}
+
+    Hungary: {name: Hungary}
+
+    Iceland: {name: Iceland}
+
+    India: {name: India}
+
+    Indonesia: {name: Indonesia}
+
+    Iran (islamic Republic Of): {name: Iran (islamic Republic Of)}
+
+    Iraq: {name: Iraq}
+
+    Ireland: {name: Ireland}
+
+    Israel: {name: Israel}
+
+    Italy: {name: Italy}
+
+    Jamaica: {name: Jamaica}
+
+    Japan: {name: Japan}
+
+    Jordan: {name: Jordan}
+
+    Kazakhstan: {name: Kazakhstan}
+
+    Kenya: {name: Kenya}
+
+    Kiribati: {name: Kiribati}
+
+    Korea, Democratic peoples Rep: {name: 'Korea, Democratic peoples Rep'}
+
+    Korea, Republic Of: {name: 'Korea, Republic Of'}
+
+    Kuwait: {name: Kuwait}
+
+    Kyrgyzstan: {name: Kyrgyzstan}
+
+    Lao Peoples Democratic Rep: {name: Lao Peoples Democratic Rep}
+
+    Latvia: {name: Latvia}
+
+    Lebanon: {name: Lebanon}
+
+    Lesotho: {name: Lesotho}
+
+    Liberia: {name: Liberia}
+
+    Libyan Arab Jamahiriya: {name: Libyan Arab Jamahiriya}
+
+    Liechtenstein: {name: Liechtenstein}
+
+    Lithuania: {name: Lithuania}
+
+    Luxembourg: {name: Luxembourg}
+
+    Macau: {name: Macau}
+
+    Macedonia: {name: Macedonia}
+
+    Madagascar: {name: Madagascar}
+
+    Malawi: {name: Malawi}
+
+    Malaysia: {name: Malaysia}
+
+    Maldives: {name: Maldives}
+
+    Mali: {name: Mali}
+
+    Malta: {name: Malta}
+
+    Marshall Islands: {name: Marshall Islands}
+
+    Martinique: {name: Martinique}
+
+    Mauritania: {name: Mauritania}
+
+    Mauritius: {name: Mauritius}
+
+    Mayotte: {name: Mayotte}
+
+    Mexico: {name: Mexico}
+
+    Micronesia: {name: Micronesia}
+
+    Moldova, Republic Of: {name: 'Moldova, Republic Of'}
+
+    Monaco: {name: Monaco}
+
+    Mongolia: {name: Mongolia}
+
+    Montserrat: {name: Montserrat}
+
+    Morocco: {name: Morocco}
+
+    Mozambique: {name: Mozambique}
+
+    Myanmar: {name: Myanmar}
+
+    Namibia: {name: Namibia}
+
+    Nauru: {name: Nauru}
+
+    Nepal: {name: Nepal}
+
+    Netherlands: {name: Netherlands}
+
+    Netherlands Antilles: {name: Netherlands Antilles}
+
+    New Caledonia: {name: New Caledonia}
+
+    New Zealand: {name: New Zealand}
+
+    Nicaragua: {name: Nicaragua}
+
+    Niger: {name: Niger}
+
+    Nigeria: {name: Nigeria}
+
+    Niue: {name: Niue}
+
+    Norfolk Island: {name: Norfolk Island}
+
+    Northern Mariana Islands: {name: Northern Mariana Islands}
+
+    Norway: {name: Norway}
+
+    Oman: {name: Oman}
+
+    Pakistan: {name: Pakistan}
+
+    Palau: {name: Palau}
+
+    Palestinian Territory, Occupied: {name: 'Palestinian Territory, Occupied'}
+
+    Panama: {name: Panama}
+
+    Papua New Guinea: {name: Papua New Guinea}
+
+    Paraguay: {name: Paraguay}
+
+    Peru: {name: Peru}
+
+    Philippines: {name: Philippines}
+
+    Pitcairn: {name: Pitcairn}
+
+    Poland: {name: Poland}
+
+    Portugal: {name: Portugal}
+
+    Puerto Rico: {name: Puerto Rico}
+
+    Qatar: {name: Qatar}
+
+    Reunion: {name: Reunion}
+
+    Romania: {name: Romania}
+
+    Russian Federation: {name: Russian Federation}
+
+    Rwanda: {name: Rwanda}
+
+    Saint Kitts And Nevis: {name: Saint Kitts And Nevis}
+
+    Saint Lucia: {name: Saint Lucia}
+
+    Saint Vincent: {name: Saint Vincent}
+
+    Samoa: {name: Samoa}
+
+    San Marino: {name: San Marino}
+
+    Sao Tome And Principe: {name: Sao Tome And Principe}
+
+    Saudi Arabia: {name: Saudi Arabia}
+
+    Senegal: {name: Senegal}
+
+    Seychelles: {name: Seychelles}
+
+    Sierra Leone: {name: Sierra Leone}
+
+    Singapore: {name: Singapore}
+
+    Slovakia (slovak Republic): {name: Slovakia (slovak Republic)}
+
+    Slovenia: {name: Slovenia}
+
+    Solomon Islands: {name: Solomon Islands}
+
+    Somalia: {name: Somalia}
+
+    South Africa: {name: South Africa}
+
+    South Georgia: {name: South Georgia}
+
+    Spain: {name: Spain}
+
+    Sri Lanka: {name: Sri Lanka}
+
+    St. Helena: {name: St. Helena}
+
+    St. Pierre And Miquelon: {name: St. Pierre And Miquelon}
+
+    Sudan: {name: Sudan}
+
+    Suriname: {name: Suriname}
+
+    Svalbard: {name: Svalbard}
+
+    Swaziland: {name: Swaziland}
+
+    Sweden: {name: Sweden}
+
+    Switzerland: {name: Switzerland}
+
+    Syrian Arab Republic: {name: Syrian Arab Republic}
+
+    Taiwan, Province Of China: {name: 'Taiwan, Province Of China'}
+
+    Tajikistan: {name: Tajikistan}
+
+    Tanzania, United Republic Of: {name: 'Tanzania, United Republic Of'}
+
+    Thailand: {name: Thailand}
+
+    Togo: {name: Togo}
+
+    Tokelau: {name: Tokelau}
+
+    Tonga: {name: Tonga}
+
+    Trinidad And Tobago: {name: Trinidad And Tobago}
+
+    Tunisia: {name: Tunisia}
+
+    Turkey: {name: Turkey}
+
+    Turkmenistan: {name: Turkmenistan}
+
+    Turks And Caicos Islands: {name: Turks And Caicos Islands}
+
+    Tuvalu: {name: Tuvalu}
+
+    Uganda: {name: Uganda}
+
+    Ukraine: {name: Ukraine}
+
+    United Arab Emirates: {name: United Arab Emirates}
+
+    United Kingdom: {name: United Kingdom}
+
+    United States: {name: United States}
+
+    United States MOI: {name: United States MOI}
+
+    Uruguay: {name: Uruguay}
+
+    Uzbekistan: {name: Uzbekistan}
+
+    Vanuatu: {name: Vanuatu}
+
+    Venezuela: {name: Venezuela}
+
+    Viet Nam: {name: Viet Nam}
+
+    Virgin Islands (british): {name: Virgin Islands (british)}
+
+    Virgin Islands (u.s.): {name: Virgin Islands (u.s.)}
+
+    Wallis And Futuna Islands: {name: Wallis And Futuna Islands}
+
+    Western Sahara: {name: Western Sahara}
+
+    Yemen: {name: Yemen}
+
+    Yugoslavia: {name: Yugoslavia}
+
+    Zambia: {name: Zambia}
+
+    Zimbabwe: {name: Zimbabwe}

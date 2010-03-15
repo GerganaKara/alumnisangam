@@ -1,0 +1,39 @@
+#create an admin user, userRole
+User:
+  admin:
+    username:      admin
+#    password:      137a78d5151da1ad7e2a10e31e5f1080cd003e99
+    password:      alumni@v2
+    enrolment:     296258
+    roll:          07000515
+    branch_id:     tronix
+    degree_id:     btech
+    tempemail:     xyz@gmail.com
+    currentlyat:   Varanasi
+    islocked:      0
+Userrole:
+  admin_role:
+    user_id:       admin
+    role_id:       admn
+  auth_role:
+    user_id:       admin
+    role_id:       ath
+  spadmin_role:
+    user_id:       admin
+    role_id:       spadmn
+  user_role:
+    user_id:       admin
+    role_id:       usr
+Personal:
+  admin_personal:
+    user_id:       admin
+    image:         /uploads/profilepic/764d1ce18e156172aa2260e8f8e68be1.png
+    salutation:    Mr
+    firstname:     Monty
+    lastname:      Python
+    gender:        Male
+    dob:           2010-03-26
+    itbhuname:     Makku
+    email:         xyz@gmail.com
+    
+
