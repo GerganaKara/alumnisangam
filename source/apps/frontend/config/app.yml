@@ -15,14 +15,14 @@ all:
     password:    
     character:   utf-8
   from: 
-    mail: system@itbhuglobal.org
-    name: ITBHUGlobal org Administrator
+    mail: admin@itbhuglobal.org
+    name: ITBHUGlobal.org Administrator
   to:
-    adminmail: gourishanker@neevtech.com
+    adminmail: admin@itbhuglobal.org
   names:
     org: ITBHU Global
   urls:
-    claim: http://version2-test.itbhuglobal.org/home/index.html
+    claim: http://version2-test.itbhuglobal.org/
   privacyicon:
     1: prvme.gif
     2: prvfriends.gif
