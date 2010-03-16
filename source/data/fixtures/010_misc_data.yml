@@ -51,6 +51,9 @@ Badge:
   topper:
     name: Topper
 Branch:
+  branch:
+    code: BRA
+    name: Branch
   cera:
     code: CER
     name: Ceramics
@@ -60,6 +63,9 @@ Branch:
   civil:
     code: CIV
     name: Civil
+  compsci:
+    code: CSE
+    name: Computer Science
   trical:
     code: EEE
     name: Electrical
@@ -75,15 +81,9 @@ Branch:
   mining:
     code: MIN
     name: Mining
-  pharma:
-    code: PHE
-    name: Pharmaceutical
-  compsci:
-    code: CSE
-    name: Computer Science
   smst:
     code: MST
     name: Material Science and Technology
-  branch:
-    code: BRA
-    name: Branch
+  pharma:
+    code: PHE
+    name: Pharmaceutical

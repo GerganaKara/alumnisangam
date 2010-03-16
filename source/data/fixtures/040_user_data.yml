@@ -5,8 +5,9 @@ User:
     password:      137a78d5151da1ad7e2a10e31e5f1080cd003e99
     enrolment:     296258
     roll:          07000515
-    branch_id:     tronix
+    branch_id:     compsci
     degree_id:     btech
+    graduationyear:	2003 
     tempemail:     admin@itbhuglobal.org
     currentlyat:   Varanasi
     islocked:      0
@@ -28,11 +29,11 @@ Personal:
     user_id:       admin
     image:         /uploads/profilepic/764d1ce18e156172aa2260e8f8e68be1.png
     salutation:    Mr
-    firstname:     Monty
-    lastname:      Python
+    firstname:     ITBHUGlobal.org
+    lastname:      Adminstrator
     gender:        Male
     dob:           2010-03-26
-    itbhuname:     Makku
+    itbhuname:     Admin
     email:         admin@itbhuglobal.org
     
 
