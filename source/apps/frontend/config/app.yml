@@ -59,11 +59,11 @@ all:
     password: I am Indian.
 # 1: me, 2: friends, 3: ITBHU, 4: Everyone 
   defaultprivacy:
-    roll: 3
+    roll: 4
     enrol: 1
-    year: 3
-    branch: 3
-    degree: 3
+    year: 4
+    branch: 4
+    degree: 4
 # Anything below this line Must NOT be changed
   lor:
     location: 1

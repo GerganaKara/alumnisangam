@@ -348,17 +348,20 @@ class adminActions extends sfActions
 			    		$lastname = $name[1];
 			    	}
 		    		
+                                $uname_suffix = $branch.substr($year,-2);
 			    	if($lastname){
-			    		$username = $name[0].'.'.$lastname.'@'.$branch.substr($year,-2);
+			    		$username = $name[0].'.'.$lastname.'@';
 			    	}else{
-			    		$username = $name[0].'@'.$branch.substr($year,-2);
+			    		$username = $name[0].'@';
 			    	}
 			    	$temp = 1;
 			    	$tempusername = $username;
-			    	while($this->uniqueuser($tempusername)){
+			    	while($this->uniqueuser($tempusername.$uname_suffix)){
 			    		$tempusername = $username.$temp;
+					$temp++;
 			    	}
 			    	
+			    	$tempusername=$tempusername.$uname_suffix;
 			    	$user->setUsername($tempusername);
 			    	if($ignoreflag == 0){
 			    		$e = $user->save();
