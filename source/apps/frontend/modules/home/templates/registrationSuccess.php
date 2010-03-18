@@ -58,7 +58,7 @@
 	<div class="vspacer10">&nbsp;</div>
 	<div class="centermsg">Your username is 
 		<b><?php if($claiminfo->getDusername()): echo $claiminfo->getDusername(); else: echo $user->getUsername(); endif; ?></b>
-		Please check your email at <b><?php echo $user->getEmail(); ?></b> for password and other instructions.
+		Please check your email at <b><?php echo $user->getEmail(); ?></b> for password and other instructions. [Note that your account is currently held for authorization, and you will receive the password only after authorization. -- We are working to fix this -- Animesh]
 	</div>
 	<div class="vspacer20">&nbsp;</div>
 	<div class="formbuttons"><a href="/"><img src="/images/firstlogin.png" alt="Proceed to first login"></a></div>
