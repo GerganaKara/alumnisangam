@@ -378,8 +378,7 @@ class adminActions extends sfActions
 			    	}
 		    	}else{
 		    		$exist[] = $i;
-		    		$log[$i][0] = "$i) In Database";
-			    	$log[$i][1] = $data[0];
+                                $log[$i][0] = "$i) In Database as ".$user->getFullname().", ".$user->getBranchname()." ".$user->getGraduationyear();			    	$log[$i][1] = $data[0];
 		    	}
 		    	$i++;
 		    } // while ($data = $reader->read()) ends here
