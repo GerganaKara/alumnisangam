@@ -41,9 +41,12 @@ Worktype:
     description:  Social Work
   edu:
     name:         Education
+    description:  Education
   tech:
     name:         Technology
+    description:  Technology
   oper:
+    name:         Operations
     description:  Operations
 Badge:
   ky:
