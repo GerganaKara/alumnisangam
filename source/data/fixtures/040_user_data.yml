@@ -57,9 +57,9 @@ Personal:
     website:
     websiteFlag:        1
     linkedin:
-    linkedinFlag:
+    linkedinFlag:       1
     hobbies:
-    hobbiesFlag:
+    hobbiesFlag:        1
 #    interest:
 Notes:
   admin_note:
