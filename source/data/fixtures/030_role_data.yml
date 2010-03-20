@@ -1,9 +1,19 @@
 Role:
+  spadmn:
+    name:         superadmin
+    description:  Administrator with all privileges(including right to create another Administrator)
+    displayname:  Super Administrator
+    assignable:   0
   admn:
     name:         admin
     displayname:  Administrator
     description:  Administrator with all privileges except to create another administrator.
     assignable:   0
+  mauth:
+    name:         masterauth
+    displayname:  Master Authorizer
+    description:  Master Authorizer
+    assignable:   1
   ath:
     name:         auth
     displayname:  Authorizer
@@ -19,13 +29,4 @@ Role:
     displayname:  Guest
     description:  Guest User
     assignable:   0
-  spadmn:
-    name:         superadmin
-    description:  Administrator with all privileges(including right to create another Administrator)
-    displayname:  Super Administrator
-    assignable:   0
-  mauth:
-    name:         masterauth
-    displayname:  Master Authorizer
-    description:  Master Authorizer
-    assignable:   1
+

@@ -17,6 +17,7 @@ User:
     currentlyat:   Varanasi
     currentlyatFlag:    1
     islocked:      0
+    usertype:      1
 Userrole:
   admin_role:
     user_id:       admin
@@ -55,10 +56,10 @@ Personal:
     emailFlag:          3
     website:
     websiteFlag:        1
-#    linkedin:
-#    linkedinFlag:
-#    hobbies:
-#    hobbiesFlag:
+    linkedin:
+    linkedinFlag:
+    hobbies:
+    hobbiesFlag:
 #    interest:
 Notes:
   admin_note:

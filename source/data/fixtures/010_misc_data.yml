@@ -24,6 +24,8 @@ Lorfields:
     fields: General
   email:
     fields: Email
+  badge:
+    fields: Badge
 Region:
   india:
     name: India
