@@ -44,7 +44,8 @@
 				foreach ($bgremarks as $bgremark):
 			?>
 				<div class="smallremark">
-					<?php echo $bgremark->getData(); ?>&nbsp;&nbsp;&nbsp;&nbsp; -<b><?php echo $bgremark->getUser()->getFullname(); ?></b>
+					<?php echo $bgremark->getData(); ?>&nbsp;&nbsp;&nbsp;&nbsp; -<b>
+                                        <?php if($bgremark->getUser()):echo $bgremark->getUser()->getFullname(); else: echo "Guest";endif; ?></b>
 				</div>		
 			<?php endforeach; ?>
 		</div>		
@@ -151,7 +152,7 @@
 			
 			<div class="<?php if($col%2==0): echo "evenRow"; else: echo "oddRow"; endif; ?>">
 				<div class="smallremark">
-					<?php echo "<i>Current Employer</i> : ".$eremark->getData() ?>&nbsp;&nbsp;&nbsp;&nbsp;- <b><?php echo $eremark->getUser()->getFullname() ?></b>
+					<?php echo "<i>Current Employer</i> : ".$eremark->getData() ?>&nbsp;&nbsp;&nbsp;&nbsp;- <b><?php if($eremark->getUser()): echo $eremark->getUser()->getFullname(); else: echo "Guest";endif; ?></b>
 				</div>
 			</div>
 			<?php endforeach; ?>
@@ -161,7 +162,7 @@
 			?>
 			<div class="<?php if($col%2==0): echo "evenRow"; else: echo "oddRow"; endif; ?>">
 				<div class="smallremark">
-					<?php echo "<i>Current Position</i> : ".$premark->getData() ?>&nbsp;&nbsp;&nbsp;&nbsp;- <b><?php echo $premark->getUser()->getFullname() ?></b>
+					<?php echo "<i>Current Position</i> : ".$premark->getData() ?>&nbsp;&nbsp;&nbsp;&nbsp;- <b><?php if($premark->getUser()):echo $premark->getUser()->getFullname(); else: echo "Guest"; endif; ?></b>
 				</div>
 			<?php endforeach; ?>			
 			</div>
@@ -234,7 +235,8 @@
 								foreach ($liremarks as $liremark):
 							?>
 								<div class="smallremark">
-									<?php echo $liremark->getData(); ?>&nbsp;&nbsp;&nbsp;&nbsp; -<b><?php echo $liremark->getUser()->getFullname(); ?></b>
+									<?php echo $liremark->getData(); ?>&nbsp;&nbsp;&nbsp;&nbsp; -<b><?php if($liremark->getUSer()): echo $liremark->getUser()->getFullname(); else: echo "Guest"; endif; ?></b>
+ 								</div>		
 								</div>		
 							<?php endforeach; ?>
 							
@@ -299,7 +301,7 @@
 					?>
 						<div class="smallremark">
 							<?php echo $locremark->getData(); ?>
-							 &nbsp;&nbsp;&nbsp;&nbsp;<b>- <?php echo $locremark->getUser()->getFullname(); ?></b>
+							 &nbsp;&nbsp;&nbsp;&nbsp;<b>- <?php if($locremark->getUser()):echo $locremark->getUser()->getFullname();else: echo "Guest"; endif; ?></b>
 						</div>
 					<?php endforeach; ?>
 			</div>
@@ -344,7 +346,7 @@
 			<div class="<?php $col++; if($col%2==0): echo "evenRow"; else: echo "oddRow"; endif; ?>">
 				<div class="vprowdataremark">
 					<?php echo $remark->getData(); ?>
-					 &nbsp;&nbsp;&nbsp;&nbsp;<b>- <?php echo $remark->getUser()->getFullname(); ?></b>
+					 &nbsp;&nbsp;&nbsp;&nbsp;<b>- <?php if ($remark->getUser()): echo $remark->getUser()->getFullname(); else: echo "Guest"; endif; ?></b>
 				</div>
 			</div>
 		<?php
