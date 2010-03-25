@@ -235,6 +235,7 @@ class homeActions extends sfActions
 		$email = $this->getRequestParameter('email');
 		$other = $this->getRequestParameter('otherinfo');
 		$dusername = $this->getRequestParameter('dusername');
+		$mob = $this->getRequestParameter('mob');
 		
 		if(!$userid){
 			$fname = $this->getRequestParameter('fname');
@@ -293,6 +294,7 @@ class homeActions extends sfActions
 			$personal->setMiddlename($mname);
 			$personal->setLastname($lname);
 			$personal->setEmail($email);
+                        $personal->setMobile($mob);
 			$personal->save();
 			
 			$userid = $user->getId();

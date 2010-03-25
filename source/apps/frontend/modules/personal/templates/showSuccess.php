@@ -39,61 +39,66 @@
 		<div class="rowdataright"><img title="<?php echo sfConfig::get('app_privacytitle_'.$personal->getDobflag()) ?>" src="/images/<?php echo sfConfig::get('app_privacyicon_'.$personal->getDobflag()) ?>"></div>
 	</div>
 	<div class="oddRow">
+		<div class="rowdataleft"><div class="rowdatalefttext">Mobile Number :</div></div>
+		<div class="rowdatamiddle"><?php echo $personal->getMobile(); ?></div>
+		<div class="rowdataright"><img title="<?php echo sfConfig::get('app_privacytitle_'.$personal->getMobileflag()) ?>" src="/images/<?php echo sfConfig::get('app_privacyicon_'.$personal->getMobileflag()) ?>"></div>
+	</div>
+	<div class="evenRow">
 		<div class="rowdataleft"><div class="rowdatalefttext">Marital Status :</div></div>
 		<div class="rowdatamiddle"><?php echo $personal->getMaritalstatus() ?></div>
 		<div class="rowdataright"><img title="<?php echo sfConfig::get('app_privacytitle_'.$personal->getMaritalstatusflag()) ?>" src="/images/<?php echo sfConfig::get('app_privacyicon_'.$personal->getMaritalstatusflag()) ?>"></div>
 	</div>
-	<div class="evenRow">
+	<div class="oddRow">
 		<div class="rowdataleft"><div class="rowdatalefttext">Email :</div></div>
 		<div class="rowdatamiddle"><?php echo $personal->getEmail() ?></div>
 		<div class="rowdataright"><img title="<?php echo sfConfig::get('app_privacytitle_'.$personal->getEmailflag()) ?>" src="/images/<?php echo sfConfig::get('app_privacyicon_'.$personal->getEmailflag()) ?>"></div>
 	</div>
-	<div class="oddRow">
+	<div class="evenRow">
 		<div class="rowdataleft"><div class="rowdatalefttext">Website :</div></div>
 		<div class="rowdatamiddle"><?php echo $personal->getWebsite() ?></div>
 		<div class="rowdataright"><img title="<?php echo sfConfig::get('app_privacytitle_'.$personal->getWebsiteflag()) ?>" src="/images/<?php echo sfConfig::get('app_privacyicon_'.$personal->getWebsiteflag()) ?>"></div>
 	</div>
-	<div class="evenRow">
+	<div class="oddRow">
 		<div class="rowdataleft"><div class="rowdatalefttext">Linked In :</div></div>
 		<div class="rowdatamiddle"><?php echo $personal->getLinkedin() ?></div>
 		<div class="rowdataright"><img title="<?php echo sfConfig::get('app_privacytitle_'.$personal->getLinkedinflag()) ?>" src="/images/<?php echo sfConfig::get('app_privacyicon_'.$personal->getLinkedinflag()) ?>"></div>
 	</div>
-	<div class="oddRow">
+	<div class="evenRow">
 		<div class="rowdataleft"><div class="rowdatalefttext">Current Location :</div></div>
 		<div class="rowdatamiddle"><?php echo $personal->getUser()->getCurrentlyat() ?></div>
 		<div class="rowdataright"><img title="<?php echo sfConfig::get('app_privacytitle_'.$personal->getUser()->getCurrentlyatflag()) ?>" src="/images/<?php echo sfConfig::get('app_privacyicon_'.$personal->getUser()->getCurrentlyatflag()) ?>"></div>
 	</div>	
-	<div class="evenRow">
+	<div class="oddRow">
 		<div class="rowdataleft"><div class="rowdatalefttext">Hobbies :</div></div>
 		<div class="rowdatamiddle"><?php echo $personal->getHobbies() ?></div>
 		<div class="rowdataright"><img title="<?php echo sfConfig::get('app_privacytitle_'.$personal->getHobbiesflag()) ?>" src="/images/<?php echo sfConfig::get('app_privacyicon_'.$personal->getHobbiesflag()) ?>"></div>
 	</div>
-	<div class="oddRow">
+	<div class="evenRow">
 		<div class="rowdataleft"><div class="rowdatalefttext">Area of Interest :</div></div>
 		<div class="rowdatamiddle"><?php echo $personal->getInterest() ?></div>
 		<div class="rowdataright">&nbsp;</div>
 	</div>
-	<div class="evenRow">
+	<div class="oddRow">
 		<div class="naturetitle">Nature of Work :</div>
 	  </div>
-		<div class="oddRow">
-			<div class="naturecheckbox">
-			    <table border="0">
-				   
-				    <?php foreach($worktypes as $workt): ?>
-					   <tr> 
-								
-								<td width="80"><?php echo $workt->getName(); ?></td>
-							
-						</tr>	
-					<?php endforeach; ?>
-				
-				</table>
-				</div>
-			</div>	
-					  <div class="vspacer20">&nbsp;</div>
-					  <div class="formbuttons"> <input type="image" src="/images/registerme.png" alt="Register Me"></div>
-					  <div class="vspacer20">&nbsp;</div>
+	<div class="evenRow">
+		<div class="naturecheckbox">
+		    <table border="0">
+			   
+			    <?php foreach($worktypes as $workt): ?>
+				   <tr> 
+						
+							<td width="80"><?php echo $workt->getName(); ?></td>
+					
+					</tr>	
+				<?php endforeach; ?>
+		
+			</table>
+		</div>
+	</div>	
+	  <div class="vspacer20">&nbsp;</div>
+	  <div class="formbuttons"> <input type="image" src="/images/registerme.png" alt="Register Me"></div>
+	  <div class="vspacer20">&nbsp;</div>
 			 
 	      
 
@@ -101,7 +106,7 @@
 <div class="vspacer20">&nbsp;</div>
 <?php if($lors): ?>
 <div class="oddRow">
-	<div class="lorhead">Did you changed your Linked In address ???</div>
+	<div class="lorhead">Did you change your Linked In address ???</div>
 	<div class="lorrejectall"><?php echo link_to('<img src="/images/rejectall.gif">', '/personal/lorrejectall') ?></div>
 		<?php $temp=0;
 		foreach($lors as $lor): ?>

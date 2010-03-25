@@ -1,6 +1,6 @@
 methods:
-  post:           [email, confirmemail, dusername]
-  get:            [email, confirmemail, dusername]
+  post:           [email, confirmemail, dusername, mob]
+  get:            [email, confirmemail, dusername, mob]
 
 fillin:
   enabled:       on
@@ -13,6 +13,10 @@ names:
   confirmemail:
     required: true
     required_msg: Please confirm your email address.
+  mob:
+    required: true
+    required_msg: Mobile Number required for confirmation.
+    validators: [mobValidator]
   dusername:
     required: false
     validators: [usernameValidator]
@@ -39,3 +43,11 @@ confirmemailValidator:
     compare_error: Emails are not matching
 usernameValidator:
   class: uniqueusernameValidator
+mobValidator:
+  class:        sfStringValidator
+  param:
+    max:        20
+    max_error:  Too long to be a phone number.
+    min:        10
+    min_error:  Too small to be a phone number.
+

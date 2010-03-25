@@ -82,6 +82,14 @@
 		<div class="editrowdataright">&nbsp;</div>
 	</div>
 	<div class="evenRow">
+		<div class="editrowdataleft"><div class="editrowdatalefttext">Mobile Number :</div></div>
+		<div class="editrowdatamiddle"><?php echo object_input_tag($personal, 'getMobile', array ( 'size' => 30)) ?></div>
+		<div class="editrowdataright">
+			<img src="/images/privacy.png" alt="privacy"/>
+			<?php echo select_tag('mobileflag', options_for_select($privacyoptions, $personal->getMobileflag())) ?>
+		</div>
+	</div>
+	<div class="oddRow">
 		<div class="editrowdataleft"><div class="editrowdatalefttext">Website :</div></div>
 		<div class="editrowdatamiddle"><?php echo object_input_tag($personal, 'getWebsite', array ( 'size' => 30)) ?></div>
 		<div class="editrowdataright">
@@ -89,7 +97,7 @@
 			<?php echo select_tag('websiteflag', options_for_select($privacyoptions, $personal->getWebsiteflag())) ?>
 		</div>
 	</div>
-	<div class="oddRow">
+	<div class="evenRow">
 		<div class="editrowdataleft"><div class="editrowdatalefttext">LinkedIn :</div></div>
 		<div class="editrowdatamiddle"><?php echo object_input_tag($personal, 'getLinkedin', array ( 'size' => 30)) ?></div>
 		<div class="editrowdataright">
@@ -97,7 +105,7 @@
 			<?php echo select_tag('linkedinflag', options_for_select($privacyoptions, $personal->getLinkedinflag())) ?>
 		</div>
 	</div>
-	<div class="evenRow">
+	<div class="oddRow">
 		<div class="editrowdataleft"><div class="editrowdatalefttext">Current Location :</div></div>
 		<div class="editrowdatamiddle"><?php $user = $personal->getUser(); echo object_input_tag($user, 'getCurrentlyat', array ( 'size' => 30)) ?></div>
 		<div class="editrowdataright">
@@ -105,7 +113,7 @@
 			<?php echo select_tag('currentlyatflag', options_for_select($privacyoptions, $user->getCurrentlyatflag())) ?>
 		</div>
 	</div>
-	<div class="oddRow">
+	<div class="evenRow">
 		<div class="editrowdataleft"><div class="editrowdatalefttext">Hobbies :</div></div>
 		<div class="editrowdatamiddle"><?php echo object_input_tag($personal, 'getHobbies', array ( 'size' => 30)) ?></div>
 		<div class="editrowdataright">
@@ -113,7 +121,7 @@
 			<?php echo select_tag('hobbiesflag', options_for_select($privacyoptions, $personal->getHobbiesflag())) ?>
 		</div>
 	</div>
-	<div class="evenRow">
+	<div class="oddRow">
 		<div class="editrowdataleft"><div class="editrowdatalefttext">Area of Interest :</div></div>
 		<div class="editrowdatamiddle"><?php echo object_input_tag($personal, 'getInterest', array ( 'size' => 30)) ?></div>
 		<div class="editrowdataright">&nbsp;</div>

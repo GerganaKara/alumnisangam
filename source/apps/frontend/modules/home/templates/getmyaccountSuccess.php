@@ -68,6 +68,14 @@
 				  </div>
 				  <div class="oddRow">
 				    <div class="formleftcol">
+				      <div class="formleftcoltext"> Mobile Number<font color="red">*</font> :</div>
+				    </div>
+				    <div class="formrightcol">
+				      <input type="text" name="mob">
+				    </div>
+				  </div>
+				  <div class="evenRow">
+				    <div class="formleftcol">
 				      <?php if($user): ?>
 				      	<div class="formleftcoltext"> Desired USERNAME :</div>
 				      <?php else: ?>
@@ -89,7 +97,7 @@
 				  <div class="centermsg">At ITBHU Alumni Association, we take your privacy seriously. So, we need to make sure only genuine alumni register.<br />
 				    Please answer the following questions.</div>
 				  <div class="vspacer20">&nbsp;</div>
-				  <div class="oddRow">
+				  <div class="evenRow">
 				    <div class="formleftcol">
 				      <div class="formleftcoltext">Your Full Roll # :</div>
 				    </div>
@@ -97,7 +105,7 @@
 				      <input type="text" name="roll">
 				    </div>
 				  </div>
-				  <div class="evenRow">
+				  <div class="oddRow">
 				    <div class="formleftcol">
 				      <div class="formleftcoltext">Your HAWA :</div>
 				    </div>
@@ -105,7 +113,7 @@
 				      <input type="text" name="hawa">
 				    </div>
 				  </div>
-				  <div class="oddRow">
+				  <div class="evenRow">
 				    <div class="formleftcol">
 				      <div class="formleftcoltext">City :</div>
 				    </div>
@@ -113,7 +121,7 @@
 				      <input type="text" name="city">
 				    </div>
 				  </div>
-				  <div class="evenRow">
+				  <div class="oddRow">
 				    <div class="formleftcol">
 				      <div class="formleftcoltext">HoD @ your time :</div>
 				    </div>
@@ -121,7 +129,7 @@
 				      <input type="text" name="hod">
 				    </div>
 				  </div>
-				  <div class="oddRow">
+				  <div class="evenRow">
 				    <div class="formleftcol">
 				      <div class="formleftcoltext">Director @ your time :</div>
 				    </div>
@@ -129,7 +137,7 @@
 				      <input type="text" name="director">
 				    </div>
 				  </div>
-				  <div class="evenRow">
+				  <div class="oddRow">
 				    <div class="formleftcol">
 				      <div class="formleftcoltext">Favorite Teacher :</div>
 				    </div>
@@ -137,7 +145,7 @@
 				      <input type="text" name="favteacher">
 				    </div>
 				  </div>
-				  <div class="oddRow">
+				  <div class="evenRow">
 				    <div class="formleftcol">
 				      <div class="formleftcoltext">Favorite shop @ Lanka :</div>
 				    </div>
@@ -145,7 +153,7 @@
 				      <input type="text" name="favlankashop">
 				    </div>
 				  </div>
-				  <div class="evenRow">
+				  <div class="oddRow">
 				    <div class="formleftcol">
 				      <?php if($user): ?>
 				      	<div class="formleftcoltext" style="padding-top: 20px; line-height: 17px;">Anything else to help us make sure you are indeed<br /><b><?php echo $user->getFullname()?></b> of <i><?php echo $user->getDegree()->getName()." ".$user->getBranch()->getCode().", ".$user->getGraduationyear() ?></i> Batch</div>
@@ -158,10 +166,10 @@
 				    </div>
 				  </div>
 				  
-				  <div class="oddRow">
+				  <div class="evenRow">
 						<div class="naturetitle">Nature of Work :</div>
 				    </div>
-					<div class="evenRow">
+					<div class="oddRow">
 						<div class="naturecheckbox">
 						    <table border="0">
 							    <tr>  

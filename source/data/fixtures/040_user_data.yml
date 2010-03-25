@@ -50,6 +50,8 @@ Personal:
     genderFlag:         2
     dob:           2010-03-26
     dobFlag:            2
+    mobile:	+000000000000
+    mobileFlag:        1
     maritalstatus:
     maritalstatusFlag:  2
     email:         admin@itbhuglobal.org

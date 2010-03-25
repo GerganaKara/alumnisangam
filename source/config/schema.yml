@@ -5,7 +5,7 @@ propel:
    password:          { type: varchar(50), required: true }
    enrolment:         { type: integer, size: 20}
    enrolFlag:         { type: varchar(5),default: <?php echo sfConfig::get('app_defaultprivacy_enrol')?> }
-   roll:              { type: integer, size: 20}
+   roll:              { type: varchar(20) }
    rollFlag:          { type: varchar(5),default: <?php echo sfConfig::get('app_defaultprivacy_roll')?> }
    graduationyear:    { type: integer, size: 4}
    branch_id:         { type: integer, foreignTable: branch, foreignReference: id }
@@ -51,6 +51,8 @@ propel:
    genderFlag:        { type: varchar(5) }
    dob:               date
    dobFlag:           { type: varchar(5) }
+   mobile:            { type: varchar(20) }
+   mobileFlag:        { type: varchar(5) }
    maritalstatus:     { type: varchar(10) }
    maritalstatusFlag: { type: varchar(5) }
    email:             { type: varchar(50) }

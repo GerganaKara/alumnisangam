@@ -141,6 +141,8 @@ class personalActions extends sfActions
     $personal->setDobflag($this->getRequestParameter('dobflag'));
     $personal->setMaritalstatus($this->getRequestParameter('maritalstatus'));
     $personal->setMaritalstatusflag($this->getRequestParameter('maritalstatusflag'));
+    $personal->setMobile($this->getRequestParameter('mobile'));
+    $personal->setMobileflag($this->getRequestParameter('mobileflag'));
     $personal->setEmail($this->getRequestParameter('email'));
     $personal->setEmailflag($this->getRequestParameter('emailflag'));
     $personal->setWebsite($this->getRequestParameter('website'));
