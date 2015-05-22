@@ -1,0 +1,1 @@
+This system is designed to manage the information of the alumni of an institution.
